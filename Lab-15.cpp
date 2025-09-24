@@ -21,24 +21,37 @@ public:
 void printMovie(const vector<Movie>& M){
 
 }
-
+//  C:\\Users\\hope4\\Desktop\\COMSC 210 Work\\210-Lab-15\\input.txt
 int main(){
     vector<Movie> Movies;
     string filepath;
-    
+    Movie hold;
     while(true){
         cout<<"Enter File Path(Enter X to close):"<<endl;
         getline(cin,filepath);    
         ifstream file(filepath);
-        if(filepath=="X"){
-            break;
-        }
         if(!file){
             cout<<"Error opening file, please try again"<<endl;
         }
+        else if(filepath=="X"){
+            break;
+        }
         else{
             cout<<"File Opened! inputing data now...."<<endl;
-            for(int i=0;i<file.)
+            for(int i=0;i<4;i++){
+                string tempname;
+                int tempyear;
+                string tempsname;
+                getline(file,tempsname);
+                file>>tempyear;
+                file.ignore();
+                getline(file,tempname);
+                hold.setname(tempname);
+                hold.setscreenname(tempsname);
+                hold.setyear(tempyear);
+                
+
+            }
 
 
         }
