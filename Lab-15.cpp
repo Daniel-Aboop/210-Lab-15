@@ -19,6 +19,13 @@ public:
     string getScreenname(){return Screenname;}  
 };
 void printMovie(const vector<Movie>& M){
+    cout<<"Printing Movies:"<<endl;
+    for(int i=0;i<4;i++){
+        
+
+    }
+
+
 
 }
 //  C:\\Users\\hope4\\Desktop\\COMSC 210 Work\\210-Lab-15\\input.txt
@@ -49,12 +56,13 @@ int main(){
                 hold.setname(tempname);
                 hold.setscreenname(tempsname);
                 hold.setyear(tempyear);
-                
-
+                Movies.push_back(hold);
             }
-
-
+            break;
         }
+    }
+    if(!(Movies.size()==0)){
+        printMovie(Movies);
     }
 
     return 1;
