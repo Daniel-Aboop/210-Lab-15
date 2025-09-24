@@ -18,16 +18,31 @@ public:
     int getyear(){return year;}
     string getScreenname(){return Screenname;}  
 };
+void printMovie(const vector<Movie>& M){
 
+}
 
 int main(){
     vector<Movie> Movies;
     string filepath;
-    fstream file;
+    
     while(true){
-    cout<<"Enter File Path:"<<endl;
-    getline(cin,file);    
+        cout<<"Enter File Path(Enter X to close):"<<endl;
+        getline(cin,filepath);    
+        ifstream file(filepath);
+        if(filepath=="X"){
+            break;
+        }
+        if(!file){
+            cout<<"Error opening file, please try again"<<endl;
+        }
+        else{
+            cout<<"File Opened! inputing data now...."<<endl;
+            for(int i=0;i<file.)
 
+
+        }
     }
+
     return 1;
 }
