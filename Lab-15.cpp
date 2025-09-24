@@ -1,3 +1,6 @@
+// COMSC-210 | Lab 15 | Daniel Santisteban
+// IDE used: VS Code
+
 #include <iostream>
 #include <vector>
 #include <fstream>
@@ -18,17 +21,19 @@ public:
     int getyear(){return year;}
     string getScreenname(){return Screenname;}  
 };
-void printMovie(const vector<Movie>& M){
+    // printMovie() takes a reference to a string array as to not make another array
+    // uses the functions to print out from the getters.
+void printMovie(vector<Movie>& M){
     cout<<"Printing Movies:"<<endl;
     for(int i=0;i<4;i++){
-        
-
+        cout<<"Movie: "<<M[i].getname()<<endl;
+        cout<<"  Year released: "<<M[i].getyear()<<endl;
+        cout<<"  Screenwriter: "<<M[i].getScreenname()<<endl;
+        cout<<endl;
     }
 
-
-
 }
-//  C:\\Users\\hope4\\Desktop\\COMSC 210 Work\\210-Lab-15\\input.txt
+
 int main(){
     vector<Movie> Movies;
     string filepath;
